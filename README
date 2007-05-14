@@ -1,0 +1,30 @@
+#################
+# Packman v1.0  #
+#################
+
+
+Autores:
+--------
+Junta de Andalucía <devmaster@juntadeandalucia.es>
+
+
+Desarrolladores:
+----------------
+Francisco Javier Ramos Álvarez <fran.programador@gmail.com>
+
+
+Descripción:
+------------
+Repositorio de Guadalinex Web, donde se pueden realizar búsquedas de paquetes, descarga de los mismo, y para la versión 4 de Guadalinex, la posibilidad de instalarlos vía nuevo protocolo apt.
+
+
+Instalación y Configuración:
+----------------------------
+Para su instalación basta con crear la base de datos 'packman' en un mysql y exportar el fichero 'packman_base.sql' que se encuentra en la carpeta 'packman_py'. A continuación, editar el fichero 'config.php' localizado en la carpeta 'php' y cambiar los parámetros de conexión. Parar terminar hay que cargar toda la base de datos, y esto lo realiza la herramienta 'checkpacks.py' situado en la carpeta 'packman_py'. Ejecute este fichero y espere a que termine el proceso, que puede tardar varios minutos dependiendo de la conexión. El actualizador 'checkpacks.py' extrae la información de los paquetes del repositorio oficial de Guadalinex y los almacena en la base de datos.
+
+
+Posibles problemas:
+----------
+Es posible que al importar la base de datos a partir del fichero sql de algún error de compatibilidad. Se ha usado un mysql 5.0.24a de manera que si ocurriese ésto basta con eliminar la última línea de la definición de cada tabla: 'ENGINE=MyISAM DEFAULT CHARSET=latin1' y la importación se hará de manera correcta.
+
+

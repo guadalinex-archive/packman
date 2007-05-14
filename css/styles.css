@@ -1,0 +1,123 @@
+@CHARSET "UTF-8";
+body, div, table, td{font-family: freesans;}
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #60b6e9;
+}
+#container, #head, #section, #body{
+	width: 100%;
+	float: left;
+}
+#head{
+	background: url(../image/bghead.png) repeat-x;
+	height: 76px;
+}
+#logo{
+	background: url(../image/logo.png) no-repeat;
+	width: 101px;
+	height: 76px;
+	float: left;
+}
+#title{
+	text-align: center;
+	width: 85%;
+	font-size: 36px;
+	color: #ffffff;
+	padding-top: 15px;
+	float: left;
+}
+#subtitle{
+	text-align: center;
+	font-size: 16px;
+	padding-top: 5px;
+	color: #ffffff;
+}
+#section{
+	font-size: 12px;
+	color: #2d4476;
+	background-color: #e0e7f1;
+}
+#body{
+	/*padding: 15px 0 0 15px;*/
+	color: #ffffff;
+	font-size: 14px;
+}
+a{
+	background: url(http://www.guadalinex.org/guadapedia/stylesheets/monobook/external.png) right no-repeat;
+	padding-right: 12px;
+}
+a:link {text-decoration: none; font-weight: bold; color: #2d4476;}
+a:visited {text-decoration: none; font-weight: bold; color: #2d4476;}
+a:active {text-decoration: none; font-weight: bold; color: #2d4476;}
+a:hover {text-decoration: underline; font-weight: bold; color: #3b80c3;}
+form{display: inline}
+input, select, textarea{
+	border: 1px solid #232a3d;
+	font-size: 10px;
+}
+.button{
+	background-color: #ffaf12;
+	color: #ffffff;
+	font-weight: bold;
+}
+.table, .tr, .td{float: left;}
+.category, .fields, .datas, #result{
+	background-color: #f2f7fd;
+	border: 1px solid #232a3d;
+}
+.category{
+	margin-top: 20px;
+	width: 250px;
+	height: 350px;
+}
+.fields{
+	margin: 20px 0  0 20px;
+	width: 70%;
+	height: 350px;
+}
+.datas{width: 100%}
+.htable{
+	background-color: #232a3d;
+	padding: 3px;
+	color: #ffffff;
+	font-size: 14px;
+}
+.btable, table{
+	padding: 5px;
+	color: #2d4476;
+	font-size: 12px;
+}
+li{margin-bottom: 3px;}
+hr{border: 1px dashed #bdbdbd;}
+hr.subline{
+	margin: 0;
+	padding: 0; 
+	border: 1px dashed #232a3d;
+}
+.field_name{
+	width: 120px;
+	text-align: right;
+	font-weight: bold;
+}
+.field_input{width: 400px;}
+.long{width: 300px;}
+.short{width: 75px;}
+.vshort{
+	width: 40px;
+	text-align: center;
+}
+#result{padding: 0;}
+#result td{padding: 3px;}
+a.deb{color: 417cd6;}
+#mirror{
+	color: #090034;
+	font-size: 11px;
+}
+#mirror a.deb:link {text-decoration: none; font-weight: bold; color: #ffffff;}
+#mirror a.deb:visited {text-decoration: none; font-weight: bold; color: #ffffff;}
+#mirror a.deb:active {text-decoration: none; font-weight: bold; color: #ffffff;}
+#mirror a.deb:hover {text-decoration: underline; font-weight: bold; color: #ffffff;}
+#mirror strong{font-size: 12px}
+#mirror ul{margin-bottom: 10px;}
+.download{font-size: 16px;}
