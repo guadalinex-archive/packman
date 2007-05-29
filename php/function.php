@@ -290,6 +290,29 @@ function getPackage(){
 }
 
 /**
+ * Devuelve toda la información de un paquete a partir de su 
+ * nombre pasado como parámetro.
+ * 
+ * @access public
+ * @param string $package
+ * @return array Array asociativo con la información
+ */
+function getPackage2($package){
+	$sql = 'select p.id_package, e.id_edition from package p ';
+	$sql .= 'inner join relation r on (p.id_relation = r.id_relation) ';
+	$sql .= 'inner join distribution d on (r.id_distribution = d.id_distribution) ';
+	$sql .= 'inner join repository re on (d.id_repository = re.id_repository) ';
+	$sql .= 'inner join edition e on (re.id_edition = e.id_edition) ';
+	$sql .= "where p.name = '$package' order by e.id_edition desc, p.id_package desc";
+	
+	$res = mysql_query($sql);
+	if(mysql_num_rows($res))
+		return $res;
+	else
+		return null;
+}
+
+/**
  * Devuelve el nombre de la Categoría según el campo section
  * 
  * @access public
